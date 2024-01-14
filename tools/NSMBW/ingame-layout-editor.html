@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../meta/ingame-layout-editor.css">
+    <title>Nebula - Ingame Layout Editor</title>
+</head>
+<body>
+<div class="editor-container">
+
+    <div class="editor" id="editor">
+
+    <div class="select-box" id="selectBox"></div>
+    <div class="grid-overlay" id="gridOverlay"></div>
+
+    <img id="layout-p1-lives" class='layout-p1-lives draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1176249480337698926/image.png?ex=656e2eb1&is=655bb9b1&hm=3b044cebc76bf4707857f9ee2274a787de3914e51afcc60a8609537c184d9318&" alt="Player 1 Lives" draggable="false">
+    <img id="layout-p2-lives" class='layout-p2-lives draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1185765657686577243/image.png?ex=6590cd53&is=657e5853&hm=8d9324f783e35a1648417db078aa1458e30cc1e126c89116150daf8a4f9d4b26&" alt="Player 2 Lives" draggable="false">
+    <img id="layout-p3-lives" class='layout-p3-lives draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1185767653504196659/image.png?ex=6590cf2f&is=657e5a2f&hm=2469ab2797059b53575a2e7112d84b050f2ebf82faf5650cd9327ae817d40259&" alt="Player 3 Lives" draggable="false">
+    <img id="layout-p4-lives" class='layout-p4-lives draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1185767932245061702/image.png?ex=6590cf71&is=657e5a71&hm=34a2a8c040116aed1862a85b8db09a730bdf98dea43997df4a3355d5b8c95b81&" alt="Player 4 Lives" draggable="false">
+
+    <img id="layout-coins" class='layout-coins draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1176262834401849344/image.png?ex=656e3b21&is=655bc621&hm=3503f91bcc4339bfb62c0c112bbb5293d5abcef3b7f42802d8df64bc80383624&" alt="Draggable Item" draggable="false">
+    <img id="layout-starcoins" class='layout-starcoins draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1176270418781425684/image.png?ex=656e4231&is=655bcd31&hm=ae8cc05220aed64766c421337672ccd1005f8f7946b5f85a069d10d2123b0ca7&" alt="Draggable Item" draggable="false">
+    
+    <img id="layout-score" class='layout-score draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1176271455139414076/image.png?ex=656e4328&is=655bce28&hm=cac739629deedec231c9fe13edad51c9385c6ac92ac07710e853836668204c2c&" alt="Draggable Item" draggable="false">
+    <img id="layout-timer" class='layout-timer draggable-item' src="https://cdn.discordapp.com/attachments/921934547002753066/1176272070255059096/image.png?ex=656e43bb&is=655bcebb&hm=53b16731be303e345d77d89689a734950613bc6675231d8438b5cf63c54b63c8&" alt="Draggable Item" draggable="false">
+
+    </div>
+</div>
+
+<div class="config">
+
+    <h1>Settings</h1>
+    <div class="config-grid">
+        <div class="config-item toggle" onclick="toggleGrid()" id="gridToggleBox">Toggle Grid [G]</div>
+        <div class="config-item toggle" onclick="toggleGridSnapping()" id="gridSnapToggleBox">Snapping [OFF]</div>
+        <div class="config-item generate" onclick="generate()" id="generateButton">Generate</div>
+    </div>
+
+    <h2>Selected Item:</h2>
+    <div class="selected-item-container" id="selectedItemSettingsContainer">
+        <img class="selected-item" id="selectedItemSettings" src="" height="60px" draggable="false">
+        <div class="selected-item-settings">
+            <h3>Offset: </h3> <h3 id="selectedItemPos">(x,y)</h3>
+            <h3 id="selectedItemOpacity">Opacity: 100%</h3> <input type="range" name="Opacity" id="opacitySlider" max="100" min="0" value="100"> 
+            <h3 id="textColor">Text Color: </h3> <div><input type="color" name="Top Color" class="text-color-select" id="topTextColor" value="#ffffff"><input type="color" class="text-color-select" name="Bottom Color" id="bottomTextColor" value="#ffffff"></div>
+            <h3 class="sampletext" id="sampleText">Sample Text</h3>
+
+        </div>
+    </div>
+    <script src="../../meta/ingame-layout-editor.js" defer></script>
+</div>
+</body>
+</html>
